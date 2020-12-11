@@ -1,10 +1,4 @@
 {
-    "cpp.buildConfigurations": [
-        {
-            "name": "",
-            "directory": ""
-        }
-    ],
     "files.exclude": {
         ".git": true,
         "**/.classpath": true,
