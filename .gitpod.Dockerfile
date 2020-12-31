@@ -13,4 +13,5 @@ USER gitpod
 RUN sudo apt-get update && \
     sudo apt-get install -y libgtk-3-dev && \
     sudo apt-get install -y libgl1-mesa-dev xorg-dev && \
+    sudo apt-get install -y tcpdump tshark && \
     sudo rm -rf /var/lib/apt/lists/*
