@@ -11,6 +11,4 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 RUN sudo apt update && \
-    sudo apt install -y libgtk-3-dev && \
-    sudo apt install -y libgl1-mesa-dev xorg-dev && \
     sudo rm -rf /var/lib/apt/lists/*
