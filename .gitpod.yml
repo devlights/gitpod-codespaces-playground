@@ -1,1 +1,1 @@
-image: gitpod/workspace-go:latest
+image: gitpod/workspace-full:latest
