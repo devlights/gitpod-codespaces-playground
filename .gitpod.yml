@@ -1,1 +1,4 @@
 image: gitpod/workspace-full:latest
+tasks:
+  - name: install go-task
+    command: brew install go-task/tap/go-task
