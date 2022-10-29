@@ -1,4 +1,20 @@
-image: gitpod/workspace-full:latest
+image: gitpod/workspace-full-vnc:latest
 tasks:
+  - name: install staticcheck
+    init: go install honnef.co/go/tools/cmd/staticcheck@latest
   - name: install go-task
-    command: brew install go-task/tap/go-task
+    init: go install github.com/go-task/task/v3/cmd/task@latest
+  - name: install goimport
+    init: go install golang.org/x/tools/cmd/goimports@latest
+  - name: install revive
+    init: go install github.com/mgechev/revive@latest
+ports:
+  - port: 5900
+    onOpen: ignore
+# vnc
+  - port: 6080
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - golang.go
