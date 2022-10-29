@@ -16,3 +16,7 @@
 
 tags
 .vscode/
+
+go.mod
+go.sum
+*.go

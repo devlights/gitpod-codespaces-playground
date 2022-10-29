@@ -1,10 +1,28 @@
-version: '3'
+version: "3"
 
 tasks:
-  default:
+  init:
     cmds:
-      - task: hello
-  hello:
+      - go mod init app
+      - go get -u github.com/devlights/gomy@latest
+      - gp open main.go
+  fmt:
     cmds:
-      - echo 'hello world'
-    silent: false
+      - goimports -w .
+  vet:
+    cmds:
+      - go vet ./...
+      - staticcheck ./...
+  lint:
+    cmds:
+      - revive -formatter stylish ./...
+  run:
+    cmds:
+      - go mod tidy
+      - go run main.go
+  version:
+    cmds:
+      - go version
+  clean:
+    cmds:
+      - rm go.* *.go
