@@ -1,28 +1,44 @@
 version: "3"
 
 tasks:
-  init:
+  init-go:
     cmds:
       - go mod init app
       - go get -u github.com/devlights/gomy@latest
       - gp open main.go
-  fmt:
+  init-dart:
+    cmds:
+      - dart create -t console app
+      - gp open app/bin/app.dart
+  fmt-go:
     cmds:
       - goimports -w .
-  vet:
+  fmt-dart:
+    dir: app
+    cmds:
+      - dart format .
+  vet-go:
     cmds:
       - go vet ./...
       - staticcheck ./...
-  lint:
+  vet-dart:
+    dir: app
+    cmds:
+      - dart analyze .
+  lint-go:
     cmds:
       - revive -formatter stylish ./...
-  run:
+  run-go:
     cmds:
       - go mod tidy
       - go run main.go
-  version:
+  run-dart:
+    dir: app
     cmds:
-      - go version
-  clean:
+      - dart run
+  clean-go:
     cmds:
       - rm go.* *.go
+  clean-dart:
+    cmds:
+      - rm -rf app

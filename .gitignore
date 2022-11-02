@@ -20,3 +20,5 @@ tags
 go.mod
 go.sum
 *.go
+
+app/
