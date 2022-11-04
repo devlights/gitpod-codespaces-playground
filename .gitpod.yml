@@ -1,4 +1,5 @@
-image: gitpod/workspace-full-vnc:latest
+image:
+  file: .gitpod.Dockerfile
 tasks:
   - name: install staticcheck
     init: go install honnef.co/go/tools/cmd/staticcheck@latest
@@ -8,8 +9,6 @@ tasks:
     init: go install golang.org/x/tools/cmd/goimports@latest
   - name: install revive
     init: go install github.com/mgechev/revive@latest
-  - name: install dart
-    init: brew tap dart-lang/dart && brew install dart
 ports:
   - port: 5900
     onOpen: ignore
