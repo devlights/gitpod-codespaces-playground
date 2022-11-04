@@ -10,6 +10,10 @@ tasks:
     cmds:
       - dart create -t console app
       - gp open app/bin/app.dart
+  init-java:
+    cmds:
+      - spring init app
+      - gp open app/src/main/java/com/example/app/DemoApplication.java
   fmt-go:
     cmds:
       - goimports -w .
@@ -36,9 +40,16 @@ tasks:
     dir: app
     cmds:
       - dart run
+  run-java:
+    dir: app
+    cmds:
+      - gradle bootRun
   clean-go:
     cmds:
       - rm go.* *.go
   clean-dart:
+    cmds:
+      - rm -rf app
+  clean-java:
     cmds:
       - rm -rf app

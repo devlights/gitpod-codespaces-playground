@@ -10,3 +10,8 @@ RUN brew tap dart-lang/dart \
 # Install Python 3.10.7
 RUN pyenv install 3.10.7 \
     && pyenv global 3.10.7
+
+# Install JDK
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
+    sdk install java 19-tem && \
+    sdk default java 19-tem"

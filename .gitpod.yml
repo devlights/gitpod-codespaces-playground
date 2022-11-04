@@ -13,6 +13,8 @@ tasks:
     init: dart --disable-analytics
   - name: install interactive (Dart REPL)
     init: dart pub global activate interactive
+  - name: install springboot CLI
+    init: sdk install springboot 2.7.5
 ports:
   - port: 5900
     onOpen: ignore
@@ -24,3 +26,4 @@ vscode:
   extensions:
     - golang.go
     - Dart-Code.dart-code
+    - vscjava.vscode-java-pack
