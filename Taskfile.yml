@@ -5,6 +5,7 @@ tasks:
     cmds:
       - go mod init app
       - go get -u github.com/devlights/gomy@latest
+      - touch main.go
       - gp open main.go
   init-dart:
     cmds:
