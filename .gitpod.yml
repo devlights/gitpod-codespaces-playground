@@ -15,6 +15,8 @@ tasks:
     init: dart pub global activate interactive
   - name: install springboot CLI
     init: sdk install springboot 2.7.5
+  - name: switch local python interpreter to 3.10.7
+    command: pyenv local 3.10.7
 ports:
   - port: 5900
     onOpen: ignore

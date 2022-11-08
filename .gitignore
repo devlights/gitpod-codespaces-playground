@@ -23,3 +23,5 @@ go.sum
 
 app/
 .venv/
+
+.python-version
