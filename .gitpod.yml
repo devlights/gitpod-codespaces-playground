@@ -13,8 +13,6 @@ tasks:
     init: dart --disable-analytics
   - name: install interactive (Dart REPL)
     init: dart pub global activate interactive
-  - name: install springboot CLI
-    init: sdk install springboot 2.7.5
   - name: switch local python interpreter to 3.10.7
     command: pyenv local 3.10.7
 ports:
