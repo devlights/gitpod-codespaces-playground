@@ -14,5 +14,5 @@ RUN pyenv install 3.10.7 \
 # Install JDK
 RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh && \
     sdk install java 17.0.5-tem && \
-    sdk install springboot 2.7.5 && \
-    sdk default java 17.0.5-tem"
+    sdk default java 17.0.5-tem && \
+    sdk install springboot 2.7.5"
