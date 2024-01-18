@@ -11,15 +11,6 @@ tasks:
     cmds:
       - dart create -t console app
       - gp open app/bin/app.dart
-  init-java:
-    cmds:
-      - spring init app
-      - gp open app/src/main/java/com/example/app/DemoApplication.java
-  init-kotlin:
-    cmds:
-      - mkdir app
-      - touch app/main.kt
-      - gp open app/main.kt
   fmt-go:
     cmds:
       - goimports -w .
@@ -35,9 +26,6 @@ tasks:
     dir: app
     cmds:
       - dart analyze .
-  lint-go:
-    cmds:
-      - revive -formatter stylish ./...
   run-go:
     cmds:
       - go mod tidy
@@ -46,24 +34,14 @@ tasks:
     dir: app
     cmds:
       - dart run
-  run-java:
-    dir: app
+  run-nu:
     cmds:
-      - gradle bootRun
-  run-kotlin:
-    dir: app
-    cmds:
-      - kotlinc main.kt -d app.jar
-      - java -jar app.jar
+      - nu
+    interactive: true
+    ignore_error: true
   clean-go:
     cmds:
       - rm go.* *.go
   clean-dart:
-    cmds:
-      - rm -rf app
-  clean-java:
-    cmds:
-      - rm -rf app
-  clean-kotlin:
     cmds:
       - rm -rf app
