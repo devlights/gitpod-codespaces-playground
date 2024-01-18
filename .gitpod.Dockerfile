@@ -1,5 +1,8 @@
 FROM gitpod/workspace-full:latest
 
+# Install Dart
+RUN brew tap dart-lang/dart && brew install dart
+
 # Install Nushell
 RUN brew install nushell
 
