@@ -4,13 +4,16 @@ tasks:
   init-go:
     cmds:
       - go mod init app
-      - go get -u github.com/devlights/gomy@latest
       - touch main.go
       - gp open main.go
   init-dart:
     cmds:
       - dart create -t console app
       - gp open app/bin/app.dart
+  init-nu:
+    cmds:
+      - touch main.nu
+      - gp open main.nu
   fmt-go:
     cmds:
       - goimports -w .
@@ -36,12 +39,13 @@ tasks:
       - dart run
   run-nu:
     cmds:
-      - nu
-    interactive: true
-    ignore_error: true
+      - nu main.nu
   clean-go:
     cmds:
       - rm go.* *.go
   clean-dart:
     cmds:
       - rm -rf app
+  clean-nu:
+    cmds:
+      - rm -r *.nu

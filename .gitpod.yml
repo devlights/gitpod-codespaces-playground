@@ -5,3 +5,4 @@ vscode:
   extensions:
     - golang.go
     - Dart-Code.dart-code
+    - TheNuProjectContributors.vscode-nushell-lang

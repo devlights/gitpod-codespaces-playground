@@ -25,3 +25,5 @@ app/
 .venv/
 
 .python-version
+
+*.nu
